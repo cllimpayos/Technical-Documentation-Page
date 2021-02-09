@@ -1,0 +1,210 @@
+<html>
+<head>
+	<title>Technical Documentation Page</title>
+	<link rel="stylesheet" type="text/css" href="tech.css">
+</head>
+<body>
+	<nav id="navbar">
+	<header>CSS Tutorial</header>
+  		<ul>
+    	<li><a class="nav-link" href="#CSS_Introduction">CSS Introduction</a></li>
+    	<li><a class="nav-link" href="#CSS_Syntax">CSS Syntax</a></li>
+    	<li><a class="nav-link" href="#CSS_Selectors">CSS Selectors</a></li>
+    	<li><a class="nav-link" href="#CSS_How_To">CSS How To</a></li>
+    	<li><a class="nav-link" href="#CSS_Comments">CSS Comments</a></li>
+    	<li><a class="nav-link" href="#Reference">Reference</a></li>
+  		</ul>
+  	</nav>
+
+	<main id="main-doc">
+  	<section class="main-section" id="CSS_Introduction">
+    	<header>CSS Introduction</header>
+    	<article>
+      		<p>
+       		CSS helps Web developers create a uniform look across several pages of a Web site. Instead of defining the style of each table 	
+       		and each block of text within a page's HTML, commonly used styles need to be defined only once in a CSS document. Once the style 
+       		is defined in cascading style sheet, it can be used by any page that references the CSS file. Plus, CSS makes it easy to change 
+       		styles across several pages at once. For example, a Web developer may want to increase the default text size from 10pt to 12pt 
+       		for fifty pages of a Web site. If the pages all reference the same style sheet, the text size only needs to be changed on the 
+       		style sheet and all the pages will show the larger text.
+        	</p>
+        	<p>
+        	While CSS is great for creating text styles, it is helpful for formatting other aspects of Web page layout as well. For example,
+        	CSS can be used to define the cell padding of table cells, the style, thickness, and color of a table's border, and the padding 
+        	around images or other objects. CSS gives Web developers more exact control over how Web pages will look than HTML does. This is 
+        	why most Web pages today incorporate cascading style sheets.
+        	</p>
+      		<ul>   
+        	<li>CSS stands for Cascading Style Sheets</li>  
+        	<li>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</li>
+        	<li>CSS saves a lot of work. It can control the layout of multiple web pages all at once</li>
+        	<li>External stylesheets are stored in CSS files</li>
+      		</ul>
+   		</article>
+	</section>
+	<hr>
+	<section class="main-section" id="CSS_Syntax">
+    	<header>CSS Syntax</header>
+    	<article>
+   	 		<p>
+   	 		A CSS rule-set consists of a selector and a declaration block:
+   	 		</p>
+   	 		<code>h1{
+   	 			color:blue; 
+   	 			font-size:12px;
+   	 			}
+   	 		</code>
+   	 		<p>
+    		The selector points to the HTML element you want to style.
+			The declaration block contains one or more declarations separated by semicolons.
+			Each declaration includes a CSS property name and a value, separated by a colon.
+			Multiple CSS declarations are separated with semicolons, and declaration blocks are
+			surrounded by curly braces.
+			</p>
+			<code>p{
+				color: red;
+				text-align: center;
+				}
+			</code>
+			<ul>
+    			<li>p is a selector in CSS (it points to the HTML element you want to style)</li>
+    			<li>color is a property, and red is the property value</li>
+    			<li>text-align is a property, and center is the property value</li> 
+    		</ul>
+   	 	</article>
+  	</section>
+  	<hr>
+  	<section class="main-section" id="CSS_Selectors">
+  		<header>CSS Selectors</header>
+  		<article>
+  			<p>
+  			CSS selectors are used to "find" (or select) the HTML elements you want to style.
+  			We can divide CSS selectors into five categories:
+  			</p>
+  			<ul>
+  				<li>Simple selectors (select elements based on name, id, class)</li>
+  				<li>Combinator selectors (select elements based on a specific relationship between them)</li>
+  				<li>Pseudo-class selectors (select elements based on a certain state)</li>
+  				<li>Pseudo-elements selectors (select and style a part of an element)</li>
+  				<li>Attribute selectors (select elements based on an attribute or attribute value)</li>
+  			</ul>
+
+  			<p>
+  			The CSS element selector selects HTML elements based on the element name.Here, all p elements on the
+  			page will be center-aligned, with a red text color: 
+  			<code>p {
+  			text-align: center;
+ 			color: red;
+			}		
+  			</code>
+  			</p>
+
+  			<p>
+  			The id selector uses the id attribute of an HTML element to select a specific element.
+  			The id of an element is unique within a page, so the id selector is used to select one unique element.
+  			To select an element with a specific id, write a hash (#) character, followed by the id of the element.The CSS
+  			rule below will be applied to the HTML element with id="para1": 
+  			<code>#para1 {
+  			text-align: center;
+ 			color: red;
+			}
+  			</code>
+  			</p>
+
+  			<p>
+  			The class selector selects HTML elements with a specific class attribute.To select elements with a specific class, write a 
+  			period (.) character, followed by the class name.In this example all HTML elements with class="center" will be red and center-
+  			aligned: 
+  			<code>.center {
+  			text-align: center;
+ 			 color: red;
+			}
+  			</code>
+  			</p>
+
+  			<p>
+  			The universal selector (*) selects all HTML elements on the page.The CSS rule below will affect every HTML element on the page: 
+  			<code>* {
+  			text-align: center;
+ 			color: blue;
+			}
+			</code>
+  			</p>
+
+  			<p>
+  			The grouping selector selects all the HTML elements with the same style definitions.It will be better to group the selectors, 
+  			to minimize the code.To group selectors, separate each selector with a comma:
+  			<code>h1, h2, p {
+ 			text-align: center;
+  			color: red;
+			}
+  			</code>
+  			</p>
+  		</article>
+  	</section>	
+  	<hr>
+  	<section class="main-section" id="CSS_How_To">
+  		<header>CSS How To</header>
+  		<article>
+  			<p>
+  			There are three ways of inserting a style sheet:
+  			</p>
+  			<ul>
+  				<li>External CSS</li>
+  				<li>Internal CSS</li>
+  				<li>Inline CSS</li>
+  			</ul>
+  			<p>
+  			With an external style sheet, you can change the look of an entire website by changing just one file! 
+  			Each HTML page must include a reference to the external style sheet file inside the link element, 
+  			inside the head section.An external style sheet can be written in any text editor, and must be saved with a .css extension. 
+  			The external .css file should not contain any HTML tags.An internal style sheet may be used if one single HTML page has a 
+  			unique style. The internal style is defined inside the style element, inside the head section.An inline style may be used to 
+  			apply a unique style for a single element.To use inline styles, add the style attribute to the relevant element. The style 
+  			attribute can contain any CSS property.
+  			</p>
+  		</article>
+  	</section>
+  	<hr>
+  	<section class="main-section" id="CSS_Comments">
+  		<header>CSS Comments</header>
+  		<article>
+  			<p>
+  			Comments are used to explain the code, and may help when you edit the source code at a later date.Comments are ignored by 
+  			browsers.A CSS comment is placed inside the styleelement, and starts with /* and ends with */:
+  			</p>
+  			<p>Single-line comment: 
+  			<code>/* This is a single-line comment */
+  			p {
+ 			 color: red;
+			}</code>
+  			</p>
+
+  			<p>
+  			<code>p{
+  			color: red;  /* Set text color to red */
+  			}
+  			</code>
+  			</p>
+
+  			<p>Multi-line comment: 
+  			<code>/* This is
+  			a multi-line 
+  			comment */
+  			p {
+ 			 color: red;
+			}</code>
+  			</p>
+  		</article>
+  	</section>
+  	<hr>
+  	<section class="main-section" id="Reference">
+  		<header>Reference</header>
+  		<article>
+  			<ul>
+  				<li><a href="https://www.w3schools.com/css/default.asp">W3schools</a></li>
+  				<li><a href="https://techterms.com/definition/css">TechTerms</a></li>
+  			</ul>
+  		</article>
+</body>
+</html>
